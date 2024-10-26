@@ -2,6 +2,8 @@
 # CCWC
 ccwc is a clone version of wc.
 
+[Link to the challenge](https://codingchallenges.substack.com/p/coding-challenge-1)
+
 ## Getting Started
 Start by installing the ccwc gem
 ```

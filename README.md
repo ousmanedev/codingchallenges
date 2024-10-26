@@ -1,6 +1,8 @@
 # Coding Challenges
 
-Solutions for the challenges from [Coding Challenges](https://codingchallenges.substack.com
+Solutions in Ruby, for the challenges from [Coding Challenges](https://codingchallenges.substack.com
 ).
 
-The solutions are implemented in Ruby.
+## Table of Contents
+
+- [Build your own wc Tool](wc/README.md)
