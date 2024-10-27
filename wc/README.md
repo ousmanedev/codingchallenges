@@ -8,10 +8,10 @@ ccwc is a clone version of wc.
 1 - Clone this repository
 ```
   git clone https://github.com/ousmanedev/codingchallenges
+  cd codingchallenges/wc
 ```
 2 - Install the ccwc gem
 ```
-  cd codingchallenges/wc
   gem install ./ccwc-0.0.1.gem
 ```
 
@@ -67,3 +67,8 @@ Running ccwc with no specific option, gives us the number of lines, words and by
   ccwc test.text
     7145   58164  342190 test.txt
 ```
+
+## Contributing
+The code follows the architecture described in this [RubyGems Guide](https://guides.rubygems.org/make-your-own-gem/).
+
+Make sure to read it and follow the conventions prescribed there.
