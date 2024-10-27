@@ -5,13 +5,23 @@ ccwc is a clone version of wc.
 [Link to the challenge](https://codingchallenges.substack.com/p/coding-challenge-1)
 
 ## Getting Started
-Start by installing the ccwc gem
+1 - Clone this repository
 ```
-  gem install ccwc
+  git clone https://github.com/ousmanedev/codingchallenges
+```
+2 - Install the ccwc gem
+```
+  cd codingchallenges/wc
+  gem install ./ccwc-0.0.1.gem
 ```
 
 ## Basic usage
 ccwc expects a filename as input or can read from the standard input if no filename is provided.
+
+### Displaying help
+```
+  ccwc help
+```
 
 ### Run ccwc with a filename
 
@@ -24,7 +34,7 @@ ccwc expects a filename as input or can read from the standard input if no filen
 
 ```
   cat test.txt | ccwc
-   7145   58164  342190 test.txt
+   7145   58164  342190
 ```
 
 
