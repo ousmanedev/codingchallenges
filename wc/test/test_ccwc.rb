@@ -20,7 +20,11 @@ class CcwcTest < Minitest::Test
     assert_equal 339292, subject.character_count
   end
 
+  def test_summary
+    assert_equal([7145, 58164, 342190], subject.summary)
+  end
+
   def subject
-    Ccwc.new(FIXTURE_FILE)
+    Ccwc.new(File.open(FIXTURE_FILE, 'r'))
   end
 end
