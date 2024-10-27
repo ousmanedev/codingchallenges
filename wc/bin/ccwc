@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require 'ccwc'
+require 'optparse'
+
+option_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: ccwc [options] example.txt"
+
+  opts.on '-l', '', 'count the lines in a file'
+  opts.on '-w', '', 'count the words in a file'
+  opts.on '-c', '', 'count the characters in a file'
+  opts.on '-m', '', 'count the bytes in a file'
+  opts.on '-h', '', 'display help'
+end
+
+if (%w(help -h --help).include?(ARGV[0]))
+  puts option_parser
+  exit(0) && return
+end
+
+options = {}
+option_parser.parse!(into: options)
+option = options.keys.first if options
+
+input_file = ARGF.file
+filename = File.basename(ARGF.filename)
+
+stats = Ccwc.new(input_file)
+result = option ? stats.public_send(option) : stats.summary.join(' ')
+
+puts "#{result} #{filename}"
+
+exit(0)
